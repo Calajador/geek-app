@@ -1,0 +1,54 @@
+
+#img {
+  width: 300px;
+  height: 300px;
+}
+
+#Titulo{
+  background-color: black;
+  font-family: fantasy;
+}
+
+.background{
+  width: 1500px;
+  height: 50px;
+  background-color: black;
+
+}
+
+.sectionT{
+  font-family: fantasy;
+  font-size: 40px;
+  color: darkorange;
+}
+
+#carcaj{
+  width: 300px;
+  height: 200px;
+  background-color: black;
+}
+
+#TCarcaj{
+  font-family: fantasy;
+  font-size: 40px;
+  color: chartreuse;
+  text-align: center;
+}
+
+#SCarcaj{
+  text-align: center;
+
+}
+
+#Unoticias{
+  font-family: fantasy;
+}
+
+/* body {
+  background-image: url('../../../../assets/back/background-1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+} */
+

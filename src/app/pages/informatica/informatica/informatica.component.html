@@ -1,0 +1,40 @@
+<div class="jumbotron animated fadeIn fast" style="background-color: black">
+    <h1 id="Jumbo" class="display-4"><strong>Noticias de Informatica</strong></h1>
+    <p class="lead">Quieres hacerte un pepino y no sabes que esta mas caro, o que hardware va a salir proximamente? </p>
+    <p class="lead">Pues aqui tienes todo lo que cuece en el mundo del PC Gaming </p>
+    <hr class="my-4">
+    <p>Aqui no vas a encontar si nos parece mejor Intel o AMD, o si los mineros nos fastidian la existencia, para eso, hay otras secciones</p>
+    <a class="btn btn-warning btn-lg" routerLink="/addinformatica" role="button"
+    *ngIf="isAuth()">Añadir articulo</a>
+  </div>
+
+
+<!-- <div class="container">
+  <div class="card-columns animated fadeIn fast">
+    <div *ngFor="let articulo of articulos; let i = index" class="card text-white bg-dark  " style="width: 20rem; max-height: 20rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{articulo.titulo}}</h5>
+        <p class="card-text">{{articulo.descripcion}}</p>
+      </div>
+      <a [routerLink]= "['/artinfor',articulo.id$]" class="btn btn-warning container  " >Leer Mas</a>
+    </div>
+  </div>
+  </div> -->
+
+
+  <div class="container">
+      <div class="card-columns">
+      <div *ngFor="let articulo of articulos" class="card animated fadeIn fast" id="card">
+        <img id="img" class="card-img-top" [src]="articulo.img" alt="{{articulo.alt}}" style="height: 200px; width: 332px;">
+        <div class="card-body">
+          <a [routerLink]= "['/artinfor',articulo.id$]">
+            <h5 class="card-title">{{articulo.titulo}}</h5>
+          </a>
+          <p class="card-text">{{articulo.descripcion}}</p>
+          <p class="card-text">{{articulo.autor}}</p>
+          <p class="card-text"><small class="text-muted">{{articulo.fecha}}</small></p>
+        </div>
+      </div>
+      </div>
+      </div>
+

@@ -1,0 +1,22 @@
+
+<div class="jumbotron animated fadeIn fast"  style="background-color: black">
+    <h1 id="Jumbo" class="display-4"> <strong>Videos Geeks</strong> </h1>
+    <p class="lead">Los mejores videos para geks de todo el internet</p>
+    <hr class="my-4">
+    <p>Algunos pueden ser muy bizarros</p>
+    <a class="btn btn-warning btn-lg" routerLink="/addvideo" role="button"
+     *ngIf="isAuth()">Añadir video</a>
+  </div>
+
+
+  <div class="container animated fast fadeIn">
+      <div class="row">
+
+        <div *ngFor="let url of urls" class="col-md-4 mt-3">
+          <iframe [src]="url.direccion | safe" frameborder="0" width="300" height="300" allowfullscreen></iframe>
+          <div class="form-group row">
+          </div>
+        </div>
+
+      </div>
+    </div>

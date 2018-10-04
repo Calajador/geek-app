@@ -1,0 +1,56 @@
+<body *ngIf="articulo" class="animated fadeIn">
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8" id="articulo">
+
+        <!-- Title -->
+        <h1 id="titulo" class="mt-4">{{articulo.titulo}}</h1>
+
+        <!-- Author -->
+        <p id="autor" class="lead">
+          by
+          {{articulo.autor}}
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p id="fecha"> {{articulo.fecha}}</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" [src]="articulo.img" alt="{{articulo.alt}}">
+
+        <hr>
+
+        <!-- Post Content -->
+        <p id="cuerpo">{{articulo.cuerpo0}}</p>
+
+        <p id="cuerpo">{{articulo.cuerpo1}}</p>
+
+        <p id="cuerpo">{{articulo.cuerpo2}}</p>
+
+        <p id="cuerpo">{{articulo.cuerpo3}}</p>
+
+        <hr>
+
+
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+
+</body>
+
+

@@ -1,0 +1,205 @@
+<body class="container">
+
+    <div id="Titulo" class=" text-center py-5 mb-5">
+        <p class="display-4" style="color: darkorange">El Carcaj</p>
+        <p class="lead" style="color: chartreuse" >Blog sobre tematicas geeks</p>
+        <p style="color: chartreuse">
+          Ademas no solo puedes leernos, tenemos un podcast al que puedes acceder bajando al final,
+          o pinchando
+          <a href="https://www.ivoox.com/podcast-carcaj_sq_f1608991_1.html" style="color: darkorange" >aqui</a>
+        </p>
+    </div>
+
+  <!-- opinion -->
+
+<div class="container mt-4 animated fadeIn fast">
+  <div class="background center-block container">
+    <div class="sectionT"><strong>
+
+      Articulos de opinion
+    </strong>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="container main-container mt-4 card-columns animated fadeIn fast">
+
+  <div class="card bg-dark text-white" style="height: 300px; width: 300px;">
+    <a [routerLink]="['/artopinion',_opiS.articulos[0].id$]" >
+
+      <img class="card-img" [src]="_opiS.articulos[0].img" alt="Card image" id="img">
+      <div class="card-img-overlay">
+        <h5 class="card-title">{{_opiS.articulos[0].titulo}}</h5>
+        <p class="card-text">{{_opiS.articulos[0].descripcion}}</p>
+        <p class="card-text">{{_opiS.articulos[0].fecha}}</p>
+      </div>
+    </a>
+    </div>
+
+    <div class="card bg-dark text-white" style="height: 300px; width: 300px;">
+        <img class="card-img" src="../../../../assets/img/mando.jpg" alt="Card image" id="img">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+      </div>
+
+      <div class="card bg-dark text-white" style="height: 300px; width: 300px;">
+          <img class="card-img" src="../../../../assets/img/mando.jpg" alt="Card image" id="img">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">Last updated 3 mins ago</p>
+          </div>
+        </div>
+  </div>
+
+  <!-- Noticias -->
+
+  <div class="container mt-4 animated fadeIn fast">
+      <div class="background center-block container">
+        <div class="sectionT">
+            <strong>Ultimas Noticias</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container mt-4 animated fadeIn fast">
+
+
+      <!-- Project One -->
+      <div  class="row" >
+        <div  class="col-md-4">
+          <a [routerLink]= "['/artjuego',_juegoS.articulos[_juegoS.articulos.length -1].id$]">
+            <img class="img-fluid rounded mb-3 mb-md-0" [src]="_juegoS.articulos[_juegoS.articulos.length -1].img" style="height: 200px; width: 300px;">
+          </a>
+        </div>
+        <div id="Unoticias" class="col-md-5">
+          <a [routerLink]= "['/artjuego',_juegoS.articulos[_juegoS.articulos.length -1].id$]" style="color: aliceblue">
+            <h3 >{{_juegoS.articulos[_juegoS.articulos.length -1].titulo}}</h3>
+          </a>
+          <p class="card-body">{{_juegoS.articulos[_juegoS.articulos.length -1].descripcion}}</p>
+
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Two -->
+      <div  class="row" >
+          <div  class="col-md-4">
+            <a [routerLink]= "['/artcomic',_comicS.articulos[_comicS.articulos.length -1].id$]" style="color: aliceblue">
+              <img class="img-fluid rounded mb-3 mb-md-0" [src]="_comicS.articulos[_comicS.articulos.length -1].img" style="height: 200px; width: 300px;">
+            </a>
+          </div>
+          <div id="Unoticias" class="col-md-5">
+            <a [routerLink]= "['/artcomic',_comicS.articulos[_comicS.articulos.length -1].id$]" style="color: aliceblue">
+              <h3 >{{_comicS.articulos[_comicS.articulos.length -1].titulo}}</h3>
+            </a>
+            <p class="card-body">{{_comicS.articulos[_comicS.articulos.length -1].descripcion}}</p>
+
+          </div>
+        </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Three -->
+      <div class="row">
+        <div class="col-md-4">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="../../../../assets/img/informatica2.jpg" style="height: 200px; width: 300px;">
+          </a>
+        </div>
+        <div class="col-md-5" id="Unoticias">
+          <h3>Project Three</h3>
+          <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+          <a class="btn btn-primary" href="#">View Project</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Four -->
+      <div class="row">
+
+        <div class="col-md-4">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="../../../../assets/img/informatica2.jpg" style="height: 200px; width: 300px;">
+          </a>
+        </div>
+        <div class="col-md-5 " id="Unoticias">
+          <h3>Project Four</h3>
+          <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+          <a class="btn btn-primary" href="#">View Project</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+
+
+    </div>
+
+    <!-- Videos -->
+
+    <div class="container mt-4 animated fadeIn fast">
+      <div class="background center-block container">
+        <div class="sectionT">
+            <strong>Videos Geeks</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container animated fast fadeIn">
+      <div class="row">
+
+        <div class="col-12 col-sm-6 col-md-4  mt-3">
+          <iframe [src]="_videoS.urls[0].direccion | safe" frameborder="0" width="300" height="300" allowfullscreen></iframe>
+          <div class="form-group row">
+          </div>
+        </div>
+
+        <div class=" col-12 col-sm-6 col-md-4  mt-3">
+          <iframe [src]="_videoS.urls[1].direccion | safe" frameborder="0" width="300" height="300" allowfullscreen></iframe>
+          <div class="form-group row">
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-4 mt-3">
+          <iframe [src]="_videoS.urls[2].direccion | safe" frameborder="0" width="300" height="300" allowfullscreen></iframe>
+          <div class="form-group row">
+          </div>
+        </div>
+
+        <a class="btn btn-warning btn-lg" routerLink="/addvideo" role="button"
+        *ngIf="isAuth()">Añadir video</a>
+
+      </div>
+    </div>
+
+    <!-- Podcast -->
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12" id="carcaj">
+          <h1 id="TCarcaj">El carcaj</h1>
+          <p id="SCarcaj">Nuestro podcast donde trataremos todos los temas <strong style="color:darkorange">geeks</strong> favoritos</p>
+          <iframe width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" [src]="_podS.urls[0].direccion | safe"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+  <a class="btn btn-warning btn-lg" routerLink="/addpodcast" role="button"
+      *ngIf="isAuth()">Añadir podcast</a>
+

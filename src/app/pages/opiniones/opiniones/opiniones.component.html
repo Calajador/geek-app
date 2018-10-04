@@ -1,0 +1,25 @@
+<div class="jumbotron animated fadeIn fast" style="background-color: black">
+  <h1 id="Jumbo" class="display-4"><strong>Opiniones Geek</strong></h1>
+  <p class="lead">Duela lo que duela, o guste lo que guste, opiniones sinceras y sin pelos en la lengua, Si te ofende algo, no lo leas</p>
+  <hr class="my-4">
+  <p>Es nuestra opinion, no es ni mejos, ni peor que la de nadie, es simplemente nuestra, y hemos venido a darla, no a hacer amigos...bueno eso también, besis!</p>
+  <a class="btn btn-warning btn-lg" routerLink="/addopinion" role="button"
+  *ngIf="isAuth()">Añadir articulo</a>
+</div>
+
+
+<div class="container">
+    <div class="card-columns">
+    <div *ngFor="let articulo of articulos" class="card animated fadeIn fast" id="card">
+      <img id="img" class="card-img-top" [src]="articulo.img" alt="{{articulo.alt}}" style="height: 200px; width: 332px;">
+      <div class="card-body">
+        <a [routerLink]= "['/artopinion',articulo.id$]">
+          <h5 class="card-title">{{articulo.titulo}}</h5>
+        </a>
+        <p class="card-text">{{articulo.descripcion}}</p>
+        <p class="card-text">{{articulo.autor}}</p>
+        <p class="card-text"><small class="text-muted">{{articulo.fecha}}</small></p>
+      </div>
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,74 @@
+<div class="row animated fadeIn fast container main-container ml-5 mt-5 ">
+  <div class="col-md-12">
+
+    <form (ngSubmit)="guardar()" #forma="ngForm">
+
+      <div class="form-group col-md-3">
+          <label>titulo</label>
+          <input [(ngModel)]="articulo.titulo" name="titulo"  type="text" class="form-control" placeholder="Titulo del Articulo" required>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label>IMG</label>
+        <input [(ngModel)]="articulo.img" name="img"  type="text" class="form-control" placeholder="imagen">
+    </div>
+
+    <div class="form-group">
+      <label>ALT</label>
+      <textarea [(ngModel)]="articulo.alt" name="alt" rows="2" type="text" class="form-control" required>
+
+      </textarea>
+  </div>
+
+    <div class="form-group col-md-3">
+      <label>Fecha</label>
+      <input [(ngModel)]="articulo.fecha" name="fecha"  type="text" class="form-control" placeholder="fecha" required>
+  </div>
+
+      <div class="form-group">
+          <label>desripcion</label>
+          <textarea [(ngModel)]="articulo.descripcion" name="descripcion" rows="2" type="text" class="form-control" required>
+
+          </textarea>
+      </div>
+
+      <div class="form-group">
+          <label>Cuerpo</label>
+          <textarea [(ngModel)]="articulo.cuerpo0" name="cuerpo0" rows="10" type="text" class="form-control">
+
+          </textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Cuerpo</label>
+        <textarea [(ngModel)]="articulo.cuerpo1" name="cuerpo1" rows="10" type="text" class="form-control">
+
+        </textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Cuerpo</label>
+      <textarea [(ngModel)]="articulo.cuerpo2" name="cuerpo2" rows="10" type="text" class="form-control">
+
+      </textarea>
+  </div>
+
+  <div class="form-group">
+    <label>Cuerpo</label>
+    <textarea [(ngModel)]="articulo.cuerpo3" name="cuerpo3" rows="10" type="text" class="form-control">
+
+    </textarea>
+</div>
+
+      <div class="form-group col-md-3">
+          <label>Escrito por</label>
+          <input [(ngModel)]="articulo.autor" name="autor"  type="text" class="form-control" placeholder="Nombre del Autor" required>
+      </div>
+
+      <div class="form-group">
+          <button [disabled]="!forma.valid" type="submit" class="btn btn-warning-primary">
+            Guardar Cambios
+          </button>
+      </div>
+
+  </form>

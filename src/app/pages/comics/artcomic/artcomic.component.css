@@ -1,0 +1,20 @@
+#titulo{
+  font-family: fantasy;
+  font-style: italic;
+  color: darkorange;
+}
+
+#fecha{
+  font-family: fantasy;
+  font-style: italic;
+}
+
+#autor{
+  font-family: fantasy;
+  font-style: italic;
+  color: chartreuse;
+}
+
+#cuerpo{
+  font-size: 18px;
+}
