@@ -27,34 +27,41 @@
 <div class="container main-container mt-4 card-columns animated fadeIn fast">
 
   <div class="card bg-dark text-white" style="height: 300px; width: 300px;">
-    <a [routerLink]="['/artopinion',_opiS.articulos[0].id$]" >
+    <a [routerLink]="['/artopinion',_opiS.articulos[_opiS.articulos.length -1].id$]" >
 
-      <img class="card-img" [src]="_opiS.articulos[0].img" alt="Card image" id="img">
+      <img class="card-img" [src]="_opiS.articulos[_opiS.articulos.length -1].img" alt="Card image" id="img">
       <div class="card-img-overlay">
-        <h5 class="card-title">{{_opiS.articulos[0].titulo}}</h5>
-        <p class="card-text">{{_opiS.articulos[0].descripcion}}</p>
-        <p class="card-text">{{_opiS.articulos[0].fecha}}</p>
+        <h5 class="card-title">{{_opiS.articulos[_opiS.articulos.length -1].titulo}}</h5>
+        <p class="card-text">{{_opiS.articulos[_opiS.articulos.length -1].descripcion}}</p>
+        <p class="card-text">{{_opiS.articulos[_opiS.articulos.length -1].fecha}}</p>
       </div>
     </a>
     </div>
 
     <div class="card bg-dark text-white" style="height: 300px; width: 300px;">
-        <img class="card-img" src="../../../../assets/img/mando.jpg" alt="Card image" id="img">
+      <a [routerLink]="['/artopinion',_opiS.articulos[_opiS.articulos.length -2].id$]" >
+
+        <img class="card-img" [src]="_opiS.articulos[_opiS.articulos.length -2].img" alt="Card image" id="img">
         <div class="card-img-overlay">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text">Last updated 3 mins ago</p>
+          <h5 class="card-title">{{_opiS.articulos[_opiS.articulos.length -2].titulo}}</h5>
+          <p class="card-text">{{_opiS.articulos[_opiS.articulos.length -2].descripcion}}</p>
+          <p class="card-text">{{_opiS.articulos[_opiS.articulos.length -2].fecha}}</p>
         </div>
+      </a>
       </div>
 
       <div class="card bg-dark text-white" style="height: 300px; width: 300px;">
-          <img class="card-img" src="../../../../assets/img/mando.jpg" alt="Card image" id="img">
+        <a [routerLink]="['/artopinion',_opiS.articulos[_opiS.articulos.length -3].id$]" >
+
+          <img class="card-img" [src]="_opiS.articulos[_opiS.articulos.length -3].img" alt="Card image" id="img">
           <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text">Last updated 3 mins ago</p>
+            <h5 class="card-title">{{_opiS.articulos[_opiS.articulos.length -3].titulo}}</h5>
+            <p class="card-text">{{_opiS.articulos[_opiS.articulos.length -3].descripcion}}</p>
+            <p class="card-text">{{_opiS.articulos[_opiS.articulos.length -3].fecha}}</p>
           </div>
+        </a>
         </div>
+
   </div>
 
   <!-- Noticias -->
@@ -111,16 +118,18 @@
       <hr>
 
       <!-- Project Three -->
-      <div class="row">
-        <div class="col-md-4">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="../../../../assets/img/informatica2.jpg" style="height: 200px; width: 300px;">
+      <div  class="row" >
+        <div  class="col-md-4">
+          <a [routerLink]= "['/artcinyser',_cineYser.articulos[_cineYser.articulos.length -1].id$]" style="color: aliceblue">
+            <img class="img-fluid rounded mb-3 mb-md-0" [src]="_cineYser.articulos[_cineYser.articulos.length -1].img" style="height: 200px; width: 300px;">
           </a>
         </div>
-        <div class="col-md-5" id="Unoticias">
-          <h3>Project Three</h3>
-          <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-          <a class="btn btn-primary" href="#">View Project</a>
+        <div id="Unoticias" class="col-md-5">
+          <a [routerLink]= "['/artcinyser',_cineYser.articulos[_cineYser.articulos.length -1].id$]" style="color: aliceblue">
+            <h3 >{{_cineYser.articulos[_cineYser.articulos.length -1].titulo}}</h3>
+          </a>
+          <p class="card-body">{{_cineYser.articulos[_cineYser.articulos.length -1].descripcion}}</p>
+
         </div>
       </div>
       <!-- /.row -->
@@ -128,17 +137,18 @@
       <hr>
 
       <!-- Project Four -->
-      <div class="row">
-
-        <div class="col-md-4">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="../../../../assets/img/informatica2.jpg" style="height: 200px; width: 300px;">
+      <div  class="row" >
+        <div  class="col-md-4">
+          <a [routerLink]= "['/artinfor',_infoS.articulos[_infoS.articulos.length -1].id$]" style="color: aliceblue">
+            <img class="img-fluid rounded mb-3 mb-md-0" [src]="_infoS.articulos[_infoS.articulos.length -1].img" style="height: 200px; width: 300px;">
           </a>
         </div>
-        <div class="col-md-5 " id="Unoticias">
-          <h3>Project Four</h3>
-          <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-          <a class="btn btn-primary" href="#">View Project</a>
+        <div id="Unoticias" class="col-md-5">
+          <a [routerLink]= "['/artinfor',_infoS.articulos[_infoS.articulos.length -1].id$]" style="color: aliceblue">
+            <h3 >{{_infoS.articulos[_infoS.articulos.length -1].titulo}}</h3>
+          </a>
+          <p class="card-body">{{_infoS.articulos[_infoS.articulos.length -1].descripcion}}</p>
+
         </div>
       </div>
       <!-- /.row -->
